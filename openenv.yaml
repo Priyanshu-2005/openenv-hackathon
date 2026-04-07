@@ -1,0 +1,12 @@
+name: "Active Investigation / Fake News Fact-Checker"
+version: "1.0.0"
+tasks:
+  - id: "task_easy"
+    difficulty: "easy"
+    description: "Outright lie - Verify an obvious false claim."
+  - id: "task_medium"
+    difficulty: "medium"
+    description: "Decontextualized quote - Verify a real quote used in a misleading context."
+  - id: "task_hard"
+    difficulty: "hard"
+    description: "Conflicting breaking news - Verify a fast-moving rumor with conflicting reports."
