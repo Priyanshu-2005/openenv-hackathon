@@ -1,3 +1,15 @@
+---
+title: OpenEnv Fact Checker
+emoji: 🕵️
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+pinned: false
+license: mit
+tags:
+  - openenv
+---
+
 # 🕵️ Active Investigation — Fake News Fact-Checker
 
 > **OpenEnv AI Agent Hackathon — Round 1 Submission**
