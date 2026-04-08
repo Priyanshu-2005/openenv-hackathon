@@ -23,3 +23,7 @@ __pycache__/
 
 # Misc
 .DS_Store
+
+# Test / output files
+*.txt
+test_api.py

@@ -56,6 +56,10 @@ def run():
                 "content": (
                     f"Investigate this claim: \"{obs.claim}\"\n"
                     f"Status: {obs.last_result}\n"
+                    f"Credibility Scores (domains): {obs.credibility_scores}\n"
+                    f"Discovered URLs: {obs.discovered_urls}\n"
+                    f"Read URLs: {obs.read_urls}\n"
+                    f"Available Actions: {obs.available_actions}\n"
                     f"Steps remaining: {obs.steps_remaining}"
                 ),
             },
@@ -103,13 +107,17 @@ def run():
                         "role": "user",
                         "content": (
                             f"Result: {obs.last_result}\n"
+                            f"Discovered URLs: {obs.discovered_urls}\n"
+                            f"Read URLs: {obs.read_urls}\n"
+                            f"Credibility Scores: {obs.credibility_scores}\n"
+                            f"Available Actions: {obs.available_actions}\n"
                             f"Step: {obs.step_count} | Steps remaining: {obs.steps_remaining}"
                         ),
                     }
                 )
 
                 if done:
-                    final_score = reward
+                    final_score = max(0.0, min(1.0, sum(total_rewards)))
                     success = final_score >= 0.7
 
             except (json.JSONDecodeError, ValidationError) as e:
